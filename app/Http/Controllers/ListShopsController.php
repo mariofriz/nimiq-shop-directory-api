@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class ListShopsController extends Controller
 {
+    const PAGE_SIZE = 50;
     /**
      * Handle the incoming request.
      *
@@ -16,7 +17,7 @@ class ListShopsController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $shops = Shop::all();
+        $shops = Shop::paginate(self::PAGE_SIZE);
 
         return ShopResource::collection($shops);
     }
