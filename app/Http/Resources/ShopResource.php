@@ -18,7 +18,14 @@ class ShopResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'website' => $this->website,
-            'phone' => $this->phone
+            'phone' => $this->phone,
+            'shippingCountries' => $this->shippingCountries,
+            'street' => $this->street,
+            'state' => $this->state,
+            'city' => $this->city,
+            'postcode' => $this->postcode,
+            'latitude' => $this->latitude,
+            'longitude' => $this->longitude
         ];
     }
 }
